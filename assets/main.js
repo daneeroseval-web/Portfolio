@@ -6,7 +6,7 @@ const PROJECTS = [
   { title: "NOVO", tag: "tag.identity", year: "2022", img: "assets/novo/novo-card-poster.jpg",
     video: "assets/novo/novo-card.mp4", thumb: "assets/previews/novo-more.jpg", href: "novo.html" },
   { title: "Chubby Buns", tag: "tag.identity", year: "2024", img: "assets/previews/chubby-card43.jpg", thumb: "assets/previews/chubby-more.jpg", href: "chubby-buns.html" },
-  { title: "Sybotanica", tag: "tag.app", year: "2024", img: "assets/sybotanica/cover.jpg", thumb: "assets/previews/sybotanica-more.jpg", href: "sybotanica.html" },
+  { title: "Sybotanica", tag: "tag.app", year: "2024", img: "assets/previews/sybotanica-card-v2.jpg", thumb: "assets/previews/sybotanica-more-v2.jpg", href: "sybotanica.html" },
   { title: "Safari", tag: "tag.identity", year: "2023", img: "assets/previews/safari-card.jpg", thumb: "assets/previews/safari-more.jpg", href: "safari.html" },
 ];
 const T = (v) => (window.I18N && /^[a-z]+\.[a-z.]+$/.test(v) ? I18N.t(v) : v);
@@ -72,7 +72,7 @@ if (grid) {
 const reel = document.querySelector("[data-reel]");
 if (reel) {
   const CASES = ["friteur", "novo", "chubby", "sybotanica", "safari"];
-  const COUNT = { friteur: 5, novo: 5, chubby: 5, sybotanica: 4, safari: 4 };
+  const COUNT = { friteur: 5, novo: 5, chubby: 5, sybotanica: 5, safari: 4 };
   const tiles = [];
   for (let i = 0; i < 5; i++) CASES.forEach((c) => { if (i < COUNT[c]) tiles.push({ c, src: `assets/reel/${c}-${i + 1}.jpg` }); });
   const cols = innerWidth > 900 ? 6 : 3;

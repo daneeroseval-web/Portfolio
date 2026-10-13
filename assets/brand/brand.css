@@ -235,3 +235,16 @@ html:has(.bc) { overflow-x: clip; }
 .bc-duo { align-items: stretch; }
 .bc-duo figure img { height: 100%; object-fit: cover; }
 @media (max-width: 600px) { .bc-stage { height: 120vw; } .bc-card:nth-child(1), .bc-card:nth-child(3) { display: none; } .bc-card:nth-child(2) { height: 78%; } }
+.info details { border-top: 1px solid var(--line); }
+.info details:last-child { border-bottom: 1px solid var(--line); }
+.info summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 18px 0; font-family: var(--display); font-weight: 700; font-size: 26px; text-transform: uppercase; }
+.info summary::-webkit-details-marker { display: none; }
+.info summary i { font-style: normal; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 18px; transition: transform .4s var(--ease), background .3s; }
+.info details[open] summary i { transform: rotate(45deg); background: var(--blue); color: #fff; border-color: transparent; }
+.info details p, .info details ul { margin: 0 0 20px; color: var(--muted); }
+.info details ul { padding-left: 18px; }
+.bc .info details[open] summary i { background: var(--blue); color: var(--on-blue); border-color: transparent; }
+.bc-intro h2 em { color: inherit; font-style: normal; }
+/* logo tiles: always square, logo centred at the same size */
+.bc-logos .tile { position: relative; aspect-ratio: auto; height: 0; padding-top: 100%; overflow: hidden; }
+.bc-logos .tile img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60%; height: 56%; max-height: none; object-fit: contain; }
