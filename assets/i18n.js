@@ -36,10 +36,6 @@
     // ---------- home ----------
     "home.title": ["Danée Roseval | Brand & Digital Designer", "Danée Roseval | Brand & Digital Designer"],
     "home.desc": ["Danée Roseval, brand and digital designer based in Velp, the Netherlands.", "Danée Roseval, brand- en digital designer uit Velp."],
-    "hero.role": ["Brand & Digital Designer", "Brand & Digital Designer"],
-    "hero.place": ["Velp, The Netherlands", "Velp, Nederland"],
-    "hero.since": ["Designing since 2015",
-                   "Ontwerpt sinds 2015"],
     "hero.intro": ["I’m Danée Roseval, a brand and digital designer who builds bold, characterful brands with a sharp graphic eye and a modern toolkit.",
                    "Ik ben Danée Roseval, brand- en digital designer. Ik bouw sterke merken met karakter, met een scherp grafisch oog en een moderne toolkit."],
     "hero.scroll": ["Scroll", "Scroll"],
