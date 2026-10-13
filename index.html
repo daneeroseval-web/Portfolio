@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-key="home.title">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +12,22 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
-<body>
+<body class="home">
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="#top" aria-label="Danée Roseval, home">
+      <a class="logo" href="#top" data-i18n-attr="aria-label:aria.home" aria-label="Danée Roseval, home">
         <img src="assets/logo.svg" alt="" width="40" height="40">
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="header-right">
-        <span class="clock" aria-label="Local time in Velp"></span>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><span></span></button>
+        <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="nl">NL</button><button type="button" data-lang="en">EN</button></div>
+        <span class="clock" data-i18n-attr="aria-label:aria.clock" aria-label="Local time in Velp"></span>
+        <button class="theme-toggle" type="button" data-i18n-attr="aria-label:aria.theme" aria-label="Toggle dark mode"><span></span></button>
       </div>
     </div>
   </header>
@@ -34,10 +35,11 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero wrap">
+      <div class="hero-reel" aria-hidden="true"><div class="reel-cols" data-reel></div></div>
       <div class="hero-meta label">
-        <span>Brand &amp; Digital Designer</span>
-        <span>Velp, The Netherlands</span>
-        <span>Crafting designs since 2015</span>
+        <span data-i18n="hero.role">Brand &amp; Digital Designer</span>
+        <span data-i18n="hero.place">Velp, The Netherlands</span>
+        <span data-i18n="hero.since">Crafting designs since 2015</span>
       </div>
       <h1 class="hero-name" aria-label="Danée Roseval">
         <span class="line"><span>Danée</span></span>
@@ -45,15 +47,15 @@
         <span class="hero-portrait"><img src="https://framerusercontent.com/images/jd1vjYVqakgFz94SscdzTBowWh0.jpg" alt="Portrait of Danée Roseval"></span>
       </h1>
       <div class="hero-foot">
-        <p class="hero-intro">I’m Danée Roseval, a brand and digital designer passionately shaping experiences for over 7 years.</p>
-        <span class="scroll-cue label"><i></i>Scroll</span>
+        <p class="hero-intro" data-i18n="hero.intro">I’m Danée Roseval, a brand and digital designer passionately shaping experiences for over 7 years.</p>
+        <a class="hero-now" href="#work" data-now><span class="label" data-i18n="hero.now">Now showing</span><span class="hero-now-t"><b data-now-n>01</b> <span data-now-t>Friteur</span> <i>↗</i></span></a>
       </div>
     </section>
 
     <!-- Work -->
     <section class="section wrap" id="work">
       <div class="section-head reveal">
-        <h2 class="section-title">Selected work</h2>
+        <h2 class="section-title" data-i18n="work.title">Selected work</h2>
         <span class="rule"></span>
         <span class="section-index">(01)</span>
       </div>
@@ -63,70 +65,70 @@
     <!-- Disciplines -->
     <div class="marquee" aria-label="Brand identity, visual storytelling, creative direction, web design">
       <div class="marquee-track" aria-hidden="true">
-        <span class="marquee-item">Brand identity<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Visual storytelling<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Creative direction<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Web design<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Brand identity<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Visual storytelling<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Creative direction<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
-        <span class="marquee-item">Web design<img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.identity">Brand identity</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.story">Visual storytelling</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.direction">Creative direction</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.web">Web design</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.identity">Brand identity</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.story">Visual storytelling</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.direction">Creative direction</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
+        <span class="marquee-item"><span data-i18n="disc.web">Web design</span><img src="assets/logo.svg" alt="" width="40" height="40" style="width:.42em;height:.42em"></span>
       </div>
     </div>
 
     <!-- About -->
     <section class="section wrap" id="about">
       <div class="section-head reveal">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title" data-i18n="about.title">About</h2>
         <span class="rule"></span>
         <span class="section-index">(02)</span>
       </div>
       <div class="about-grid">
-        <p class="about-lead reveal">My passion lies in blending creativity and strategy to build brands that not only look beautiful, but <em>feel meaningful and authentic.</em></p>
-        <p class="about-body reveal">I hold a Bachelor’s degree in Communication and Multimedia Design, which has given me a strong foundation in both visual communication and digital strategy. This background allows me to create brands and experiences that balance clarity, creativity, and functionality.</p>
+        <p class="about-lead reveal" data-i18n-html="about.lead">My passion lies in blending creativity and strategy to build brands that not only look beautiful, but <em>feel meaningful and authentic.</em></p>
+        <p class="about-body reveal" data-i18n="about.body">I hold a Bachelor’s degree in Communication and Multimedia Design, which has given me a strong foundation in both visual communication and digital strategy. This background allows me to create brands and experiences that balance clarity, creativity, and functionality.</p>
       </div>
     </section>
 
     <!-- Experience -->
     <section class="section wrap" id="experience">
       <div class="section-head reveal">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title" data-i18n="exp.title">Experience</h2>
         <span class="rule"></span>
         <span class="section-index">(03)</span>
       </div>
       <div class="rows">
         <article class="row reveal">
-          <span class="row-years">2025 – Present</span>
-          <h3 class="row-role">Graphic Designer<span class="row-org">Gobsmacked® B2B marketing agency</span></h3>
-          <p class="row-desc">As a graphic designer, I lead full-scale rebrands, from visual identity to digital rollout, ensuring every touchpoint feels consistent and purposeful. I design websites that balance strategy and aesthetics, and create marketing materials that bring brands to life across platforms.</p>
+          <span class="row-years" data-i18n="exp.present">2025 – Present</span>
+          <h3 class="row-role"><span data-i18n="exp.gob.role">Graphic Designer</span><span class="row-org" data-i18n="exp.gob.org">Gobsmacked® B2B marketing agency</span></h3>
+          <p class="row-desc" data-i18n="exp.gob.desc">As a graphic designer, I lead full-scale rebrands, from visual identity to digital rollout, ensuring every touchpoint feels consistent and purposeful. I design websites that balance strategy and aesthetics, and create marketing materials that bring brands to life across platforms.</p>
         </article>
         <article class="row reveal">
           <span class="row-years">2022 – 2024</span>
-          <h3 class="row-role">Content Marketeer<span class="row-org">Arnhem Studiestad</span></h3>
-          <p class="row-desc">As a Content Marketer, I developed and executed campaigns that positioned Arnhem as a vibrant student city. I was responsible for planning marketing strategies, creating content plans, and designing visual assets that brought each campaign to life, from concept to execution.</p>
+          <h3 class="row-role"><span data-i18n="exp.ast.role">Content Marketeer</span><span class="row-org">Arnhem Studiestad</span></h3>
+          <p class="row-desc" data-i18n="exp.ast.desc">As a Content Marketer, I developed and executed campaigns that positioned Arnhem as a vibrant student city. I was responsible for planning marketing strategies, creating content plans, and designing visual assets that brought each campaign to life, from concept to execution.</p>
         </article>
         <article class="row reveal">
           <span class="row-years">2022</span>
-          <h3 class="row-role">Junior Animator<span class="row-org">FullFrame (Internship)</span></h3>
-          <p class="row-desc">As a Junior Animator at Full Frame, I worked on a variety of animation projects from concept to completion. I was responsible for illustrating full storyboards and bringing them to life in Adobe After Effects, combining visual storytelling with motion design to create engaging and polished animations.</p>
+          <h3 class="row-role"><span data-i18n="exp.ff.role">Junior Animator</span><span class="row-org" data-i18n="exp.ff.org">FullFrame (Internship)</span></h3>
+          <p class="row-desc" data-i18n="exp.ff.desc">As a Junior Animator at Full Frame, I worked on a variety of animation projects from concept to completion. I was responsible for illustrating full storyboards and bringing them to life in Adobe After Effects, combining visual storytelling with motion design to create engaging and polished animations.</p>
         </article>
       </div>
 
       <div class="section-head sub-head reveal">
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title" data-i18n="edu.title">Education</h2>
         <span class="rule"></span>
         <span class="section-index">(04)</span>
       </div>
       <div class="rows">
         <article class="row reveal">
           <span class="row-years">2019 – 2024</span>
-          <h3 class="row-role">BA in Communication &amp; Multimedia Design<span class="row-org">Arnhem University of Applied Sciences</span></h3>
-          <p class="row-desc">Specialized in content design, branding, campaign development, digital and graphic design.</p>
+          <h3 class="row-role"><span data-i18n="edu.ba">BA in Communication &amp; Multimedia Design</span><span class="row-org" data-i18n="edu.ba.org">Arnhem University of Applied Sciences</span></h3>
+          <p class="row-desc" data-i18n="edu.ba.desc">Specialized in content design, branding, campaign development, digital and graphic design.</p>
         </article>
         <article class="row reveal">
           <span class="row-years">2022 – 2023</span>
-          <h3 class="row-role">Minor in Strategic Branding<span class="row-org">Nijmegen University of Applied Sciences</span></h3>
-          <p class="row-desc">Developed myself further in brand strategy and visual identity through a minor in Strategic Branding.</p>
+          <h3 class="row-role"><span data-i18n="edu.minor">Minor in Strategic Branding</span><span class="row-org" data-i18n="edu.minor.org">Nijmegen University of Applied Sciences</span></h3>
+          <p class="row-desc" data-i18n="edu.minor.desc">Developed myself further in brand strategy and visual identity through a minor in Strategic Branding.</p>
         </article>
       </div>
     </section>
@@ -134,21 +136,22 @@
     <!-- Contact -->
     <section class="section contact wrap" id="contact">
       <div class="section-head reveal">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-i18n="contact.title">Contact</h2>
         <span class="rule"></span>
         <span class="section-index">(05)</span>
       </div>
-      <p class="contact-intro reveal">Looking to start a project or you need consultation? Feel free to contact me.</p>
+      <p class="contact-intro reveal" data-i18n="contact.intro">Looking to start a project or you need consultation? Feel free to contact me.</p>
       <a class="contact-mail reveal" href="mailto:info@daneeroseval.com">info@daneeroseval.com</a>
 
       <footer class="site-footer">
         <span>© <span data-year-now></span> Danée Roseval</span>
-        <span>Velp, GLD, The Netherlands</span>
-        <a href="#top">Back to top ↑</a>
+        <span data-i18n="footer.place">Velp, GLD, The Netherlands</span>
+        <a href="#top" data-i18n="footer.top">Back to top ↑</a>
       </footer>
     </section>
   </main>
 
-  <script src="assets/main.js"></script>
+  <script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>

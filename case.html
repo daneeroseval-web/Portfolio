@@ -14,32 +14,33 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html" aria-label="Danée Roseval, home">
+      <a class="logo" href="index.html" data-i18n-attr="aria-label:aria.home" aria-label="Danée Roseval, home">
         <img src="assets/logo.svg" alt="" width="40" height="40">
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="index.html#work">Work</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#experience">Experience</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#work" data-i18n="nav.work">Work</a>
+        <a href="index.html#about" data-i18n="nav.about">About</a>
+        <a href="index.html#experience" data-i18n="nav.experience">Experience</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="header-right">
-        <span class="clock" aria-label="Local time in Velp"></span>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode"><span></span></button>
+        <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="nl">NL</button><button type="button" data-lang="en">EN</button></div>
+        <span class="clock" data-i18n-attr="aria-label:aria.clock" aria-label="Local time in Velp"></span>
+        <button class="theme-toggle" type="button" data-i18n-attr="aria-label:aria.theme" aria-label="Toggle dark mode"><span></span></button>
       </div>
     </div>
   </header>
 
   <main data-case>
     <section class="case-hero wrap">
-      <a class="back label" href="index.html#work">← All work</a>
+      <a class="back label" href="index.html#work" data-i18n="back.all">← All work</a>
       <h1 class="case-h1" data-title>[Project name]</h1>
 
       <dl class="case-facts">
-        <div><dt class="label">Client</dt><dd>[Client]</dd></div>
-        <div><dt class="label">Year</dt><dd data-year>[Year]</dd></div>
-        <div><dt class="label">Discipline</dt><dd data-tag>[Discipline]</dd></div>
-        <div><dt class="label">Role</dt><dd>[Role]</dd></div>
+        <div><dt class="label" data-i18n="case.client">Client</dt><dd data-i18n="case.ph.client">[Client]</dd></div>
+        <div><dt class="label" data-i18n="case.year">Year</dt><dd data-year>[Year]</dd></div>
+        <div><dt class="label" data-i18n="case.discipline">Discipline</dt><dd data-tag>[Discipline]</dd></div>
+        <div><dt class="label" data-i18n="case.role">Role</dt><dd data-i18n="case.ph.role">[Role]</dd></div>
       </dl>
 
       <div class="case-cover reveal"><img data-cover src="" alt=""></div>
@@ -47,40 +48,41 @@
 
     <section class="wrap">
       <div class="case-block reveal">
-        <h2>Challenge</h2>
-        <p>[What the client was struggling with, and why it mattered]</p>
+        <h2 data-i18n="case.challenge">Challenge</h2>
+        <p data-i18n="case.ph.challenge">[What the client was struggling with, and why it mattered]</p>
       </div>
       <div class="case-block reveal">
-        <h2>Approach</h2>
-        <p>[How you tackled it: the idea, the choices you made]</p>
+        <h2 data-i18n="case.approach">Approach</h2>
+        <p data-i18n="case.ph.approach">[How you tackled it: the idea, the choices you made]</p>
       </div>
 
       <div class="case-gallery">
-        <div class="ph reveal">[Image]</div>
-        <div class="ph reveal">[Image]</div>
-        <div class="ph reveal">[Image]</div>
+        <div class="ph reveal" data-i18n="case.ph.image">[Image]</div>
+        <div class="ph reveal" data-i18n="case.ph.image">[Image]</div>
+        <div class="ph reveal" data-i18n="case.ph.image">[Image]</div>
       </div>
 
       <div class="case-block reveal">
-        <h2>Result</h2>
-        <p>[What the client gained from it]</p>
+        <h2 data-i18n="case.result">Result</h2>
+        <p data-i18n="case.ph.result">[What the client gained from it]</p>
       </div>
     </section>
 
     <section class="wrap">
       <a class="next-case" data-next href="#">
-        <span class="label">Next project</span>
+        <span class="label" data-i18n="case.next">Next project</span>
         <span class="case-h1">[Project name]</span>
       </a>
       <footer class="site-footer" style="margin-top:0">
         <span>© <span data-year-now></span> Danée Roseval</span>
-        <span>Velp, GLD, The Netherlands</span>
+        <span data-i18n="footer.place">Velp, GLD, The Netherlands</span>
         <a href="mailto:info@daneeroseval.com">info@daneeroseval.com</a>
       </footer>
       <div style="height:48px"></div>
     </section>
   </main>
 
-  <script src="assets/main.js"></script>
+  <script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>

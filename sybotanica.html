@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en" data-title-key="sy.title">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sybotanica | Danée Roseval</title>
+  <meta name="description" content="Sybotanica, an app that helps plant parents take better care of their plants. Case by Danée Roseval.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/sybotanica/app.css">
+  <link rel="stylesheet" href="assets/sybotanica/case.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body class="sy">
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7c-3.2 4-6 7.3-6 10.8a6 6 0 0 0 12 0c0-3.5-2.8-6.8-6-10.8z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24"><path d="M4 10h16M5.5 10l1.6 9.2A2 2 0 0 0 9.1 21h5.8a2 2 0 0 0 2-1.8L18.5 10M12 10V7m0 0c0-2.5 2-4 4.5-4C16.5 5.5 14.5 7 12 7zm0 0C12 4.8 10.4 3.5 8 3.5 8 5.7 9.6 7 12 7z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a1 1 0 0 1 3 3l-9 9a2 2 0 0 1-.9.5l-2.9.8a.5.5 0 0 1-.6-.6l.8-2.9a2 2 0 0 1 .5-.8z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01"/></symbol>
+</svg>
+
+<!-- ======================= app screens ======================= -->
+<!-- All prototype texts use i18n keys (assets/i18n.js): NL = the original app copy, EN = its translation. -->
+<template id="sb">
+  <div class="sb"><span>10:14</span><span class="sys">
+    <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+    <svg viewBox="0 0 16 12"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .4 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4zm0 3.5c1.4 0 2.6.5 3.6 1.4l1.2-1.3A7 7 0 0 0 8 3.9a7 7 0 0 0-4.8 1.9l1.2 1.3c1-.9 2.2-1.4 3.6-1.4zm0 3.4c-.6 0-1.1.2-1.5.6L8 11.6l1.5-1.9c-.4-.4-.9-.6-1.5-.6z"/></svg>
+    <svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.6"/><rect x="24" y="4" width="2" height="4" rx="1" opacity=".4"/></svg>
+  </span></div>
+</template>
+
+<template id="t-scan">
+  <div class="scr" data-name="scan">
+    <div class="scan-bg"><img src="assets/sybotanica/img/scan-2.jpg" alt=""></div>
+    <div data-sb="light"></div>
+    <div class="top"><span class="icon-btn glass"><svg class="i"><use href="#i-x"/></svg></span><span class="icon-btn glass"><svg class="i"><use href="#i-zap"/></svg></span></div>
+    <div class="scan-title" data-i18n="a.scan">Scan your plant!</div>
+    <div class="scan-frame"><i></i><i></i><i></i><i></i><span class="scan-line"></span></div>
+    <div class="scan-found"><span class="dot"><svg class="i"><use href="#i-check"/></svg></span><span data-i18n="a.found">Your plant is a Ficus!</span></div>
+    <div class="shutter-row"><span class="icon-btn glass"><svg class="i"><use href="#i-image"/></svg></span><span class="shutter"></span><a data-i18n="a.noscan">Add your plant without scanning</a></div>
+  </div>
+</template>
+
+<template id="t-name">
+  <div class="scr" data-name="name">
+    <div data-sb></div>
+    <div class="steps"><i class="done"></i><i></i><i></i><i></i></div>
+    <div class="hero-photo"><img src="assets/sybotanica/img/frank-square.jpg" alt=""><span class="tag" data-i18n-html="a.tag">Your plant is a <b>Ficus!</b></span></div>
+    <div class="body">
+      <h2 class="h2" data-i18n="a.tell">Want to tell us about your plant?</h2>
+      <div style="height:16px"></div>
+      <div class="field focus"><label data-i18n="a.name">Name</label><div class="val"><span data-type="Frank"></span><span class="caret"></span></div></div>
+      <div class="field area"><label data-i18n="a.desc">Description</label></div>
+    </div>
+    <div class="actions"><span class="btn soft"><svg class="i"><use href="#i-left"/></svg></span><span class="btn primary"><span data-i18n="a.next">Next</span> <svg class="i"><use href="#i-right"/></svg></span></div>
+  </div>
+</template>
+
+<template id="t-pot">
+  <div class="scr" data-name="pot">
+    <div data-sb></div>
+    <div class="steps"><i class="done"></i><i class="done"></i><i></i><i></i></div>
+    <div class="body" style="top:90px">
+      <h2 class="h1" style="font-size:25px" data-i18n-html="a.pot.h"><b>Frank the Ficus</b>, what a lovely name!</h2>
+      <p class="lead" style="margin-top:8px;font-size:14px" data-i18n="a.pot.lead">With reminders we help you take good care of Frank! For the best advice we need some information from you.</p>
+      <div style="height:16px"></div>
+      <div class="acc"><div class="head"><span><small data-i18n="a.size">Size</small><span data-i18n="a.q.size">How big is Frank?</span></span><svg class="i"><use href="#i-down"/></svg></div></div>
+      <div class="acc open"><div class="head"><span><small data-i18n="a.pottype">Pot type</small><span data-i18n="a.q.pot">What kind of pot is Frank in?</span></span><svg class="i"><use href="#i-down"/></svg></div>
+        <div class="panel"><div class="range" data-range>
+          <div style="font-size:13px;color:var(--mute)" data-i18n="a.q.diam">Roughly what is the diameter of the pot?</div>
+          <div class="track"><span class="fill"></span><span class="knob a"></span><span class="knob b"></span></div>
+          <div class="out"><span data-i18n="a.diam">Diameter</span><b data-range-out data-i18n="a.r1">5 to 10 cm</b></div>
+        </div></div>
+      </div>
+      <div class="acc"><div class="head"><span><small data-i18n="a.soil">Potting soil</small><span data-i18n="a.q.soil">What kind of soil is Frank in?</span></span><svg class="i"><use href="#i-down"/></svg></div></div>
+      <p class="hint"><span data-i18n="a.hint">Leave it empty? Then you simply get reminders based on the standard Ficus advice.</span><br><a data-i18n="a.hint.link">I want the standard Ficus advice</a></p>
+    </div>
+    <div class="actions"><span class="btn soft"><svg class="i"><use href="#i-left"/></svg></span><span class="btn primary"><span data-i18n="a.next">Next</span> <svg class="i"><use href="#i-right"/></svg></span></div>
+  </div>
+</template>
+
+<template id="t-rem">
+  <div class="scr" data-name="rem">
+    <div data-sb></div>
+    <div class="steps"><i class="done"></i><i class="done"></i><i class="done"></i><i></i></div>
+    <div class="body" style="top:90px">
+      <h2 class="h1" style="font-size:25px" data-i18n-html="a.rem.h"><b>Frank the Ficus</b> is almost ready!</h2>
+      <p class="lead" style="margin-top:8px;font-size:13.5px" data-i18n="a.rem.lead">Great! Based on the information you filled in, we have put together the perfect reminders for you! But don’t worry, if you’d rather not get reminders for a while, you can simply switch them off.</p>
+      <div style="height:14px"></div>
+      <div class="rows">
+        <div class="rrow"><span class="ico c-water"><svg class="i"><use href="#i-drop"/></svg></span><div><b data-i18n="a.water">Water</b><span data-i18n="a.water.d">Water once a week</span></div><span class="tgl" data-tgl></span></div>
+        <div class="rrow"><span class="ico c-sun"><svg class="i"><use href="#i-sun"/></svg></span><div><b data-i18n="a.light">Light</b><span data-i18n="a.light.d">Every two weeks, check where the plant stands and make sure it gets enough, but indirect, sunlight.</span></div><span class="tgl" data-tgl></span></div>
+        <div class="rrow"><span class="ico c-food"><svg class="i"><use href="#i-leaf"/></svg></span><div><b data-i18n="a.food">Food</b><span data-i18n="a.food.d">Once a month, add plant food to support Frank’s growth and health.</span></div><span class="tgl" data-tgl></span></div>
+        <div class="rrow"><span class="ico c-pot"><svg class="i"><use href="#i-pot"/></svg></span><div><b data-i18n="a.repot">Repotting</b><span data-i18n="a.repot.d">Repot every year or every few years, depending on how fast it grows, to support healthy growth.</span></div><span class="tgl" data-tgl></span></div>
+      </div>
+    </div>
+    <div class="actions"><span class="btn soft"><svg class="i"><use href="#i-left"/></svg></span><span class="btn primary"><span data-i18n="a.save">Save</span> <svg class="i"><use href="#i-right"/></svg></span></div>
+  </div>
+</template>
+
+<template id="t-done">
+  <div class="scr" data-name="done">
+    <div data-sb></div>
+    <div class="steps"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+    <div class="hero-photo" style="height:250px"><img src="assets/sybotanica/img/frank-done.jpg" alt=""><span class="check"><svg class="i"><use href="#i-check"/></svg></span></div>
+    <div class="body" style="top:352px">
+      <h2 class="h2" style="text-align:center" data-i18n-html="a.done.h">Everything is ready for <span class="hl">Frank the Ficus!</span></h2>
+      <div class="facts">
+        <div class="fact"><small data-i18n="a.size">Size</small><b data-i18n="a.v.medium">Medium-sized plant</b></div>
+        <div class="fact"><small data-i18n="a.water">Water</small><b data-i18n="a.v.weekly">Weekly</b></div>
+        <div class="fact"><small data-i18n="a.pottype">Pot type</small><b data-i18n="a.v.ceramic">Ceramic</b></div>
+        <div class="fact"><small data-i18n="a.light">Light</small><b data-i18n="a.v.biweekly">Every two weeks</b></div>
+        <div class="fact"><small data-i18n="a.diampot">Pot diameter</small><b>20 cm</b></div>
+        <div class="fact"><small data-i18n="a.food">Food</small><b data-i18n="a.v.monthly">Monthly</b></div>
+        <div class="fact"><small data-i18n="a.soil">Potting soil</small><b data-i18n="a.v.mix">Own mix</b></div>
+        <div class="fact"><small data-i18n="a.repot">Repotting</small><b data-i18n="a.v.yearly">Yearly</b></div>
+      </div>
+    </div>
+    <div class="actions stack"><span class="btn primary" data-i18n="a.another">Add another plant</span><span class="btn soft" data-i18n="a.myplants">Go to my plants</span></div>
+  </div>
+</template>
+
+<template id="t-plant">
+  <div class="scr tall" data-name="plant">
+    <div class="pl-hero"><img src="assets/sybotanica/img/frank-main.jpg" alt=""></div>
+    <div data-sb="light"></div>
+    <div class="top"><span class="icon-btn glass"><svg class="i"><use href="#i-x"/></svg></span><span class="icon-btn glass"><svg class="i"><use href="#i-more"/></svg></span></div>
+    <div class="pl-name"><h2>Frank</h2><span>Ficus</span></div>
+    <div class="water-card"><p><span data-i18n-html="a.watered">Frank last had water <b>7 days ago</b>!</span><small data-i18n="a.drinks">Frank drinks about 500 ml of water.</small></p><span class="water-btn"><svg class="i"><use href="#i-drop"/></svg></span></div>
+    <div class="pl-flow">
+      <section>
+        <div class="chips"><span class="chip"><svg class="i"><use href="#i-drop"/></svg><span data-i18n="a.v.weekly">Weekly</span></span><span class="chip"><svg class="i"><use href="#i-sun"/></svg><span data-i18n="a.v.biweekly">Every two weeks</span></span><span class="chip"><svg class="i"><use href="#i-leaf"/></svg><span data-i18n="a.v.monthly">Monthly</span></span></div>
+      </section>
+      <section>
+        <div class="row-head"><h3 class="h2" data-i18n="a.about">About the Ficus</h3></div>
+        <div class="bento-mini"><div><img src="assets/sybotanica/img/ficus-1.jpg" alt=""></div><div><img src="assets/sybotanica/img/ficus-2.jpg" alt=""></div><div><img src="assets/sybotanica/img/ficus-3.jpg" alt=""></div></div>
+        <p class="pl-text"><span data-i18n="a.about.t">The Ficus, also known as the fig tree, is a popular houseplant from tropical regions. It is loved for its glossy, dark green leaves and its ability to thrive in different light conditions.</span> <a class="hl" style="font-weight:600" data-i18n="a.more">Show more</a></p>
+      </section>
+      <section>
+        <div class="row-head"><h3 class="h2" data-i18n="a.tips">Tips for your Ficus</h3></div>
+        <div class="tips">
+          <div class="tip light"><img src="assets/sybotanica/img/tip-sybasoil.png" alt=""><p data-i18n="a.tip1">Use SybaSoil, made especially for the Ficus</p></div>
+          <div class="tip"><img src="assets/sybotanica/img/tip-herpotten.jpg" alt=""><p data-i18n="a.tip2">Follow these 5 steps to repot your Ficus!</p></div>
+          <div class="tip"><img src="assets/sybotanica/img/tip-bladluis.jpg" alt=""><p data-i18n="a.tip3">Watch this video on getting rid of aphids</p></div>
+        </div>
+        <div class="dots"><i class="on"></i><i></i><i></i></div>
+      </section>
+      <section>
+        <div class="row-head"><h3 class="h2" data-i18n="a.timeline">Timeline</h3><a><svg class="i" style="width:20px;height:20px"><use href="#i-plus"/></svg></a></div>
+        <div class="tl">
+          <div class="tl-item"><small data-i18n="a.d1">2 May 2024</small><div class="ph"><img src="assets/sybotanica/img/timeline-1.jpg" alt=""><p data-i18n-html="a.leaves"><b>Frank</b> is getting new leaves!</p></div></div>
+          <div class="tl-item"><small data-i18n="a.d2">15 April 2024</small><div class="ph" style="height:180px"><img src="assets/sybotanica/img/frank-main.jpg" alt=""><p data-i18n-html="a.first">First photo of <b>Frank</b></p></div></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</template>
+
+<template id="t-remlist">
+  <div class="scr" data-name="remlist">
+    <div data-sb></div>
+    <div class="top" style="justify-content:flex-end"><span class="icon-btn"><svg class="i"><use href="#i-filter"/></svg></span></div>
+    <div class="page-title"><h2 class="h1" data-i18n="a.reminders">Reminders</h2></div>
+    <div class="r-group" style="top:176px">
+      <h4 style="color:var(--water)"><svg class="i" style="width:16px;height:16px"><use href="#i-drop"/></svg><span data-i18n="a.g.water">1 Water</span></h4>
+      <div class="r-card"><img src="assets/sybotanica/img/frank-square.jpg" alt=""><div><b>Frank</b><span><svg class="i"><use href="#i-clock"/></svg><span data-i18n="a.ago6">6 days ago</span></span></div><span class="amt">500 ml</span></div>
+    </div>
+    <div class="r-group" style="top:306px">
+      <h4 style="color:var(--sun)"><svg class="i" style="width:16px;height:16px"><use href="#i-sun"/></svg><span data-i18n="a.g.light">1 Light</span></h4>
+      <div class="r-card"><img src="assets/sybotanica/img/frank-square.jpg" alt=""><div><b>Frank</b><span style="display:block;color:var(--ink-2);font-size:12.5px;margin:1px 0 2px" data-i18n="a.checklight">Check whether Frank gets enough sunlight</span><span><svg class="i"><use href="#i-clock"/></svg><span data-i18n="a.ago14">14 days ago</span></span></div><span class="done-btn" data-done><svg class="i"><use href="#i-check"/></svg></span></div>
+    </div>
+    <div data-tabbar="0"></div>
+  </div>
+</template>
+
+<template id="t-feed">
+  <div class="scr" data-name="feed">
+    <div data-sb></div>
+    <div class="feed-track roll">
+      <article class="post">
+        <div class="who"><img src="assets/sybotanica/img/av-saskia.jpg" alt=""><b>Saskia</b></div>
+        <p data-i18n="a.saskia">Hey everyone, I have a problem with my plant: it’s covered in aphids! 😟 Does anyone have tips to get rid of them? I’d like to keep my plant healthy without using harmful chemicals. Thanks in advance! 🌿</p>
+        <div class="pics"><div><img src="assets/sybotanica/img/feed-saskia-1.jpg" alt=""></div><div><img src="assets/sybotanica/img/feed-saskia-2.jpg" alt=""></div></div>
+        <div class="bar"><span data-like><span class="burst"></span><svg class="i"><use href="#i-heart"/></svg><em style="font-style:normal" data-count>1</em></span><span><svg class="i"><use href="#i-chat"/></svg>3</span></div>
+      </article>
+      <article class="post">
+        <div class="who"><img src="assets/sybotanica/img/av-pieter.jpg" alt=""><b>Pieter</b></div>
+        <p data-i18n="a.pieter">Hey everyone, I just repotted my cactus and wanted to share a few tips! 🌵</p>
+        <ol data-i18n-html="a.pieter.l"><li>Wear thick gloves.</li><li>Use well-draining potting soil.</li><li>Choose a pot with drainage holes.</li><li>Let the cactus dry for a few days before watering again.</li></ol>
+        <p style="margin-top:4px" data-i18n="a.pieter.end">Good luck!</p>
+        <div class="pics one"><div><img src="assets/sybotanica/img/feed-cactus.jpg" alt=""></div></div>
+        <div class="bar"><span class="liked"><svg class="i"><use href="#i-heart"/></svg>8</span><span><svg class="i"><use href="#i-chat"/></svg>2</span></div>
+      </article>
+      <article class="post">
+        <div class="who"><img src="assets/sybotanica/img/av-karel.jpg" alt=""><b>Karel</b></div>
+        <p data-i18n="a.karel">Hi plant lovers! My monstera is growing like crazy! 🌿 Does anyone have tips to keep the leaves big and healthy? All suggestions are welcome!</p>
+        <div class="pics"><div><img src="assets/sybotanica/img/feed-monstera-1.jpg" alt=""></div><div><img src="assets/sybotanica/img/feed-monstera-2.jpg" alt=""></div></div>
+        <div class="bar"><span><svg class="i"><use href="#i-heart"/></svg>8</span><span><svg class="i"><use href="#i-chat"/></svg>2</span></div>
+      </article>
+    </div>
+    <div class="feed-head"><span class="me"><img src="assets/sybotanica/img/av-tobias-sm.jpg" alt="">Tobias</span><span class="acts"><span class="icon-btn"><svg class="i"><use href="#i-edit"/></svg></span><span class="icon-btn"><svg class="i"><use href="#i-bell"/></svg></span></span></div>
+    <div data-tabbar="3"></div>
+  </div>
+</template>
+
+<template id="t-friend">
+  <div class="scr" data-name="friend">
+    <div data-sb></div>
+    <div class="top"><span class="icon-btn"><svg class="i"><use href="#i-left"/></svg></span><span class="icon-btn"><svg class="i"><use href="#i-more"/></svg></span></div>
+    <div class="prof"><img src="assets/sybotanica/img/av-sybren.jpg" alt=""><div><h3>Sybren</h3><p data-i18n="a.boss">Plant boss!</p><p data-i18n="a.plants92">92 plants</p></div></div>
+    <div class="stats"><span class="btn soft" data-i18n="a.following">Following</span><span class="btn primary" data-i18n="a.message">Message</span></div>
+    <div class="pgrid" data-grid></div>
+  </div>
+</template>
+
+<!-- ======================= page ======================= -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html" data-i18n-attr="aria-label:aria.home" aria-label="Danée Roseval, home"><img src="assets/logo.svg" alt="" width="40" height="40"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#work" data-i18n="nav.work">Work</a><a href="index.html#about" data-i18n="nav.about">About</a><a href="index.html#experience" data-i18n="nav.experience">Experience</a><a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="nl">NL</button><button type="button" data-lang="en">EN</button></div>
+      <span class="clock" data-i18n-attr="aria-label:aria.clock" aria-label="Local time in Velp"></span>
+      <button class="theme-toggle" type="button" data-i18n-attr="aria-label:aria.theme" aria-label="Toggle dark mode"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- hero -->
+  <section class="sy-hero wrap">
+    <a class="cs-back" href="index.html#work" data-i18n-attr="aria-label:aria.back" aria-label="Back to all work">←</a>
+    <h1 class="sy-title"><span>Sybotanica</span></h1>
+    <div class="sy-meta label"><span data-i18n="sy.meta">App design, Prototype</span><span>2024</span><span class="cs-scroll"><i class="wheel"></i><span data-i18n="scroll.explore">Scroll to explore</span></span></div>
+    <div class="stage reveal">
+      <div class="phone"><div class="phone-screen" data-screen="t-scan"></div></div>
+      <div class="phone"><div class="phone-screen" data-screen="t-plant" data-autoscroll></div></div>
+      <div class="phone"><div class="phone-screen" data-screen="t-feed"></div></div>
+      <div class="stage-word" aria-hidden="true">Sybotanica</div>
+    </div>
+  </section>
+
+  <!-- intro -->
+  <section class="section wrap">
+    <div class="sy-intro">
+      <h2 class="reveal" data-i18n-html="sy.intro">An app for Sybotanica that helps <em>plant parents</em> take better care of their plants.</h2>
+      <div class="info reveal">
+        <span class="dot-label label" data-i18n="info.title">Project information</span>
+        <details open><summary><span data-i18n="info.challenge">Challenge</span><i>+</i></summary><p data-i18n="sy.challenge"></p></details>
+        <details><summary><span data-i18n="info.solution">Solution</span><i>+</i></summary><p data-i18n="sy.solution"></p></details>
+        <details><summary><span data-i18n="info.products">Products</span><i>+</i></summary><ul><li data-i18n="sy.prod.1"></li><li data-i18n="sy.prod.2"></li><li data-i18n="sy.prod.3"></li><li data-i18n="sy.prod.4"></li><li data-i18n="sy.prod.5"></li></ul></details>
+        <details><summary><span data-i18n="info.team">Team</span><i>+</i></summary><p data-i18n="sy.team"></p></details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- process -->
+  <section class="section wrap" id="process">
+    <div class="section-head reveal"><h2 class="section-title" data-i18n="sy.proc">Process</h2><span class="rule"></span><span class="section-index">(01)</span></div>
+    <div class="proc">
+      <article class="proc-row reveal"><div class="proc-copy"><span class="num">01</span><h3 data-i18n="sy.p1.t"></h3><p data-i18n="sy.p1"></p></div><figure class="proc-img"><img src="assets/sybotanica/process/brainwrite.jpg" alt="" loading="lazy"></figure></article>
+      <article class="proc-row rev reveal"><div class="proc-copy"><span class="num">02</span><h3 data-i18n="sy.p2.t"></h3><p data-i18n="sy.p2"></p></div><figure class="proc-img"><img src="assets/sybotanica/process/flowcharts.jpg" alt="" loading="lazy"></figure></article>
+      <article class="proc-row reveal"><div class="proc-copy"><span class="num">03</span><h3 data-i18n="sy.p3.t"></h3><p data-i18n="sy.p3"></p></div><figure class="proc-img"><img src="assets/sybotanica/process/wireflow.jpg" alt="" loading="lazy"></figure></article>
+      <article class="proc-row rev reveal"><div class="proc-copy"><span class="num">04</span><h3 data-i18n="sy.p4.t"></h3><p data-i18n="sy.p4"></p></div><figure class="proc-img duo-img"><img src="assets/sybotanica/process/midfi-plant.jpg" alt="" loading="lazy"><img src="assets/sybotanica/process/community-midfi.jpg" alt="" loading="lazy"></figure></article>
+      <article class="proc-row reveal"><div class="proc-copy"><span class="num">05</span><h3 data-i18n="sy.p5.t"></h3><p data-i18n="sy.p5"></p></div><figure class="proc-img"><img src="assets/sybotanica/process/proof-of-concept.jpg" alt="" loading="lazy"></figure></article>
+    </div>
+  </section>
+
+  <!-- add a plant: scrolly -->
+  <section class="wrap" id="flow">
+    <div class="section-head reveal" style="margin-bottom:0">
+      <h2 class="section-title" data-i18n="sy.flow">Add a plant</h2><span class="rule"></span><span class="section-index">(02)</span>
+    </div>
+    <div class="flow">
+      <div class="flow-pin">
+        <span class="flow-ring"></span>
+        <div class="phone"><div class="phone-screen" data-flow>
+          <div data-screen-inline="t-scan"></div><div data-screen-inline="t-name"></div><div data-screen-inline="t-pot"></div><div data-screen-inline="t-rem"></div><div data-screen-inline="t-done"></div>
+        </div></div>
+        <div class="flow-progress"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="flow-steps">
+        <div class="fstep" data-step="0"><span class="num">01</span><h3 data-i18n="sy.s1">Scan</h3><p data-i18n="sy.s1.d">[Short explanation of the scan step]</p><q data-i18n="a.scan">Scan your plant!</q></div>
+        <div class="fstep" data-step="1"><span class="num">02</span><h3 data-i18n="sy.s2">Name it</h3><p data-i18n="sy.s2.d">[Short explanation of the naming step]</p><q data-i18n="a.tell">Want to tell us about your plant?</q></div>
+        <div class="fstep" data-step="2"><span class="num">03</span><h3 data-i18n="sy.s3">Pot &amp; soil</h3><p data-i18n="sy.s3.d">[Short explanation of the pot and soil step]</p><q data-i18n="a.q.diam">Roughly what is the diameter of the pot?</q></div>
+        <div class="fstep" data-step="3"><span class="num">04</span><h3 data-i18n="sy.s4">Reminders</h3><p data-i18n="sy.s4.d">[Short explanation of the reminders step]</p><q data-i18n-html="a.rem.h"><b>Frank the Ficus</b> is almost ready!</q></div>
+        <div class="fstep" data-step="4"><span class="num">05</span><h3 data-i18n="sy.s5">Done</h3><p data-i18n="sy.s5.d">[Short explanation of the result]</p><q data-i18n-html="a.done.h">Everything is ready for Frank the Ficus!</q></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sy-band" aria-hidden="true"><div class="track">
+    <span data-i18n="a.tab.rem">Reminders</span><span data-i18n="a.tab.shop">Shop</span><span data-i18n="a.tab.add">Add plants</span><span data-i18n="a.tab.com">Community</span><span data-i18n="a.tab.acc">Account</span>
+    <span data-i18n="a.tab.rem">Reminders</span><span data-i18n="a.tab.shop">Shop</span><span data-i18n="a.tab.add">Add plants</span><span data-i18n="a.tab.com">Community</span><span data-i18n="a.tab.acc">Account</span>
+  </div></div>
+
+  <!-- my plant: tall screen scrolls with the page -->
+  <section class="wrap tall-wrap" id="plant">
+    <div class="tall-pin">
+      <div class="split">
+        <div class="copy reveal">
+          <span class="dot-label label" data-i18n="sy.plant.label">(03) My plant</span>
+          <h2>Frank</h2>
+          <p data-i18n="sy.plant.d">[What a plant page gives the user: care status, info, tips and a timeline]</p>
+        </div>
+        <div class="device"><div class="phone"><div class="phone-screen" data-screen="t-plant" data-scrolllink></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reminders -->
+  <section class="section wrap">
+    <div class="panel sand">
+      <div class="split rev wrap">
+        <div class="copy reveal">
+          <span class="dot-label label" data-i18n="sy.rem.label">(04) Reminders</span>
+          <h2 data-i18n="a.reminders">Reminders</h2>
+          <p data-i18n="sy.rem.d">[How the reminders work]</p>
+        </div>
+        <div class="device">
+          <div class="phone" style="--pw:min(330px,40vh)"><div class="phone-screen" data-screen="t-remlist"></div></div>
+          <div class="notes" data-notes>
+            <div class="note"><img src="assets/sybotanica/img/frank-square.jpg" alt=""><div><b data-i18n="a.water">Water</b><span data-i18n-html="a.watered">Frank last had water <b>7 days ago</b>!</span></div></div>
+            <div class="note"><img src="assets/sybotanica/img/frank-square.jpg" alt=""><div><b data-i18n="a.light">Light</b><span data-i18n="a.checklight">Check whether Frank gets enough sunlight</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- community -->
+  <section class="wrap">
+    <div class="panel plum">
+      <div class="split wrap">
+        <div class="copy reveal">
+          <span class="dot-label label" data-i18n="sy.com.label">(05) Community</span>
+          <h2 data-i18n="a.tab.com">Community</h2>
+          <p data-i18n="sy.com.d">[What the community adds: sharing tips, asking for help, following friends]</p>
+        </div>
+        <div class="device duo">
+          <div class="phone"><div class="phone-screen" data-screen="t-feed"></div></div>
+          <div class="phone"><div class="phone-screen" data-screen="t-friend"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- recommendations -->
+  <section class="section wrap">
+    <div class="section-head reveal"><h2 class="section-title" data-i18n="sy.rec">Recommendations</h2><span class="rule"></span><span class="section-index">(06)</span></div>
+    <p class="rec-lead reveal" data-i18n="sy.rec.lead"></p>
+    <div class="rec reveal">
+      <div><span class="num">01</span><h3 data-i18n="sy.rec.1.t"></h3><p data-i18n="sy.rec.1"></p></div>
+      <div><span class="num">02</span><h3 data-i18n="sy.rec.2.t"></h3><p data-i18n="sy.rec.2"></p></div>
+      <div><span class="num">03</span><h3 data-i18n="sy.rec.3.t"></h3><p data-i18n="sy.rec.3"></p></div>
+    </div>
+  </section>
+
+  <!-- before / after -->
+  <section class="section wrap">
+    <div class="ba">
+      <div class="copy reveal">
+        <span class="dot-label label" data-i18n="sy.ba.label">(07) 2026 upgrade</span>
+        <h2 data-i18n="sy.ba.title">Before / after</h2>
+        <p data-i18n="sy.ba.lead">The original design, kept and lifted. Drag to compare.</p>
+        <ul class="ba-list">
+          <li><b>01</b><span data-i18n="sy.ba.1">One typeface everywhere: Poppins, with a clear type scale</span></li>
+          <li><b>02</b><span data-i18n="sy.ba.2">Larger touch targets and no text under 11px</span></li>
+          <li><b>03</b><span data-i18n="sy.ba.3">Softer cards and photos with generous radii</span></li>
+          <li><b>04</b><span data-i18n="sy.ba.4">A segmented progress bar and an icon per reminder</span></li>
+          <li><b>05</b><span data-i18n="sy.ba.5">A floating glass tab bar</span></li>
+        </ul>
+      </div>
+      <div class="cmp reveal">
+        <div>
+          <div class="cmp-phone" data-cmp>
+            <div class="phone"><div class="phone-screen" data-screen="t-rem" data-static>
+              <div class="cmp-before"><img src="assets/sybotanica/img/before-reminders.png" alt=""></div>
+              <span class="cmp-handle"></span>
+              <input class="cmp-range" type="range" min="0" max="100" value="50" data-i18n-attr="aria-label:sy.aria.cmp" aria-label="Compare before and after">
+            </div></div>
+          </div>
+          <div class="cmp-tags label"><span data-i18n="sy.before">Before</span><span data-i18n="sy.after">After</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- design system -->
+  <section class="wrap">
+    <div class="section-head reveal"><h2 class="section-title" data-i18n="sy.ds">Design system</h2><span class="rule"></span><span class="section-index">(08)</span></div>
+    <div class="ds">
+      <div class="colors reveal">
+        <div class="sw" style="background:#ff6600;color:#fff"><b data-i18n="sy.c.orange">Orange</b>#FF6600</div>
+        <div class="sw" style="background:#59ba63;color:#fff"><b data-i18n="sy.c.green">Green</b>#59BA63</div>
+        <div class="sw" style="background:#473d45;color:#f7f5ed"><b data-i18n="sy.c.plum">Plum</b>#473D45</div>
+        <div class="sw" style="background:#f7f5ed;color:#473d45;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)"><b data-i18n="sy.c.cream">Cream</b>#F7F5ED</div>
+        <div class="sw" style="background:#f2e8db;color:#473d45"><b data-i18n="sy.c.sand">Sand</b>#F2E8DB</div>
+        <div class="sw" style="background:#5974ba;color:#fff"><b data-i18n="sy.c.water">Water</b>#5974BA</div>
+        <div class="sw" style="background:#b39d3f;color:#fff"><b data-i18n="sy.c.light">Light</b>#B39D3F</div>
+        <div class="sw" style="background:#fffdf8;color:#473d45;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)"><b data-i18n="sy.c.card">Card</b>#FFFDF8</div>
+      </div>
+      <div class="type reveal"><span class="label" style="color:#8a7f87" data-i18n="sy.typeface">Typeface</span><div class="aa">Aa</div><div style="font-size:28px;font-weight:600;letter-spacing:-.02em">Poppins</div><div class="w"><span style="font-weight:400">Regular</span><span style="font-weight:500">Medium</span><span style="font-weight:600">SemiBold</span></div></div>
+      <div class="comps reveal">
+        <div class="scr">
+          <span class="btn primary"><span data-i18n="a.next">Next</span> <svg class="i"><use href="#i-right"/></svg></span>
+          <span class="btn soft"><svg class="i"><use href="#i-left"/></svg> <span data-i18n="a.back">Back</span></span>
+          <span class="tgl on" data-tgl-demo></span>
+          <span class="chip"><svg class="i"><use href="#i-drop"/></svg><span data-i18n="a.v.weekly">Weekly</span></span>
+          <span class="chip"><svg class="i"><use href="#i-sun"/></svg><span data-i18n="a.v.biweekly">Every two weeks</span></span>
+          <span class="water-btn"><svg class="i"><use href="#i-drop"/></svg></span>
+          <span class="steps" style="position:relative;inset:auto;width:200px"><i class="done"></i><i class="done"></i><i class="done"></i><i></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- wall of screens -->
+  <section class="section">
+    <div class="wall" aria-hidden="true"><div class="wall-wrap">
+      <div class="wall-row" data-wall="t-scan t-name t-pot t-rem t-done t-remlist t-feed t-friend"></div>
+      <div class="wall-row" data-wall="t-friend t-feed t-remlist t-done t-rem t-pot t-name t-scan"></div>
+    </div></div>
+  </section>
+
+  <!-- more + talk -->
+  <section class="wrap">
+    <div class="rail-head reveal"><h2 data-i18n="more.title">More works</h2></div>
+    <div class="more-grid" data-more="Sybotanica"></div>
+  </section>
+
+  <section class="talk wrap">
+    <span class="label" data-i18n="talk.label">Looking to start a project or you need consultation?</span>
+    <a href="mailto:info@daneeroseval.com"><span data-i18n="talk.cta">Let’s talk</span> <i>↗</i></a>
+  </section>
+
+  <div class="wrap">
+    <footer class="site-footer" style="margin-top:0">
+      <span>© <span data-year-now></span> Danée Roseval</span>
+      <span data-i18n="footer.place">Velp, GLD, The Netherlands</span>
+      <a href="#top" onclick="scrollTo({top:0,behavior:'smooth'});return false" data-i18n="footer.top">Back to top ↑</a>
+    </footer>
+    <div style="height:48px"></div>
+  </div>
+</main>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/sybotanica/case.js"></script>
+</body>
+</html>
