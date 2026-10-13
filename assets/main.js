@@ -2,12 +2,12 @@
 const IMG = "https://framerusercontent.com/images/";
 const PROJECTS = [
   { title: "Friteur", tag: "tag.identity", year: "2024", img: "assets/friteur/logo-animation-16x9-poster.jpg",
-    video: "assets/friteur/logo-animation-16x9.mp4", ratio: "16 / 9", thumb: "assets/previews/friteur-thumb.jpg", href: "friteur.html" },
+    video: "assets/friteur/logo-animation-16x9.mp4", ratio: "16 / 9", thumb: "assets/previews/friteur-more.jpg", href: "friteur.html" },
   { title: "NOVO", tag: "tag.identity", year: "2022", img: "assets/novo/novo-card-poster.jpg",
-    video: "assets/novo/novo-card.mp4", thumb: "assets/previews/novo-thumb.jpg", href: "novo.html" },
-  { title: "Chubby Buns", tag: "tag.identity", year: "2024", img: "assets/previews/chubby-card43.jpg", thumb: "assets/previews/chubby-thumb.jpg", href: "chubby-buns.html" },
-  { title: "Sybotanica", tag: "tag.app", year: "2024", img: "assets/sybotanica/cover.jpg", href: "sybotanica.html" },
-  { title: "Safari", tag: "tag.identity", year: "2023", img: "assets/previews/safari-card.jpg", thumb: "assets/previews/safari-thumb.jpg", href: "safari.html" },
+    video: "assets/novo/novo-card.mp4", thumb: "assets/previews/novo-more.jpg", href: "novo.html" },
+  { title: "Chubby Buns", tag: "tag.identity", year: "2024", img: "assets/previews/chubby-card43.jpg", thumb: "assets/previews/chubby-more.jpg", href: "chubby-buns.html" },
+  { title: "Sybotanica", tag: "tag.app", year: "2024", img: "assets/sybotanica/cover.jpg", thumb: "assets/previews/sybotanica-more.jpg", href: "sybotanica.html" },
+  { title: "Safari", tag: "tag.identity", year: "2023", img: "assets/previews/safari-card.jpg", thumb: "assets/previews/safari-more.jpg", href: "safari.html" },
 ];
 const T = (v) => (window.I18N && /^[a-z]+\.[a-z.]+$/.test(v) ? I18N.t(v) : v);
 const tx = (v) => (/^[a-z]+\.[a-z.]+$/.test(v) ? `<span data-i18n="${v}">${T(v)}</span>` : v);
@@ -110,8 +110,7 @@ if (document.body.classList.contains("home") && !matchMedia("(prefers-reduced-mo
     cards.forEach((c, i) => {
       const r = c.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
       const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-      c.style.setProperty("--py", (p * -40).toFixed(1) + "px");
-      c.style.setProperty("--my2", (p * (i % 2 ? 26 : 12)).toFixed(1) + "px");
+      c.style.setProperty("--py", (p * -4).toFixed(2) + "%");
     });
   };
   addEventListener("scroll", () => requestAnimationFrame(tick), { passive: true }); tick();

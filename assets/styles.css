@@ -722,3 +722,15 @@ a { color: inherit; text-decoration: none; }
 .home .case-media img, .home .case-media video { transform: translate3d(0, var(--py, 0px), 0) scale(1.12) !important; transition: transform .2s linear; }
 .home .case-meta { transform: translate3d(0, var(--my2, 0px), 0); }
 @media (prefers-reduced-motion: reduce) { .reel-cols, .home .hero-name, .home .case-media, .home .case-media img, .home .case-media video { transform: none !important; } }
+
+/* ---------- Home: centred name, tighter rhythm ---------- */
+.home .hero { justify-content: space-between; }
+.home .hero-name { margin-block: auto; text-align: center; }
+.home .hero-name .line:nth-child(2) { text-align: center; }
+.home .case-meta { transform: none; }
+.home .section { padding-block: clamp(64px, 8vw, 120px); }
+.home .about-grid { align-items: end; }
+.home .about-lead { grid-column: 1 / span 7; }
+.home .about-body { grid-column: 9 / span 4; margin: 0; }
+@media (max-width: 900px) { .home .about-lead, .home .about-body { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .contact-mail { font-size: 9.6vw; word-break: keep-all; white-space: nowrap; } }

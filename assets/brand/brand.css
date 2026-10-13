@@ -231,3 +231,7 @@ html:has(.bc) { overflow-x: clip; }
 .bc-app { padding-block: clamp(40px, 6vw, 96px); }
 .bc-menu { margin-block: clamp(16px, 2vw, 32px); }
 .bc .section + .section { padding-top: clamp(40px, 6vw, 96px); }
+.bc-logos .tile img { width: 58%; height: 58%; max-height: none; object-fit: contain; }
+.bc-duo { align-items: stretch; }
+.bc-duo figure img { height: 100%; object-fit: cover; }
+@media (max-width: 600px) { .bc-stage { height: 120vw; } .bc-card:nth-child(1), .bc-card:nth-child(3) { display: none; } .bc-card:nth-child(2) { height: 78%; } }
