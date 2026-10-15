@@ -369,11 +369,12 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(40px, 9.4vw, 168px);
+  /* sized on the real content width (minus a scrollbar) so it always fits one line */
+  font-size: max(28px, calc((min(100vw, 1600px) - 2 * var(--gutter) - 20px) * 0.1));
   line-height: 0.9;
   text-transform: uppercase;
   color: var(--blue);
-  word-break: break-all;
+  white-space: nowrap;
   background: linear-gradient(currentColor, currentColor) 0 100% / 0 4px no-repeat;
   transition: background-size 0.7s var(--ease);
   padding-bottom: 6px;
@@ -721,7 +722,6 @@ a { color: inherit; text-decoration: none; }
 .home .about-lead { grid-column: 1 / span 7; }
 .home .about-body { grid-column: 9 / span 4; margin: 0; }
 @media (max-width: 900px) { .home .about-lead, .home .about-body { grid-column: 1 / -1; } }
-@media (max-width: 600px) { .contact-mail { font-size: 9.6vw; word-break: keep-all; white-space: nowrap; } }
 /* let's talk: clean round arrow button */
 .talk a i { width: 0.62em; height: 0.62em; font-size: 1em; color: transparent; position: relative; overflow: hidden; }
 .talk a i::before { content: ""; position: absolute; inset: 27%; background: var(--on-blue, #fff);

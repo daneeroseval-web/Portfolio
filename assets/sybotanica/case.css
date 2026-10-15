@@ -44,7 +44,8 @@ html:has(.sy) { overflow-x: clip; }
   margin: 0;
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(76px, 21.4vw, 400px);
+  /* sized on the real content width (minus a scrollbar) so the word never clips */
+  font-size: calc((min(100vw, 1600px) - 2 * var(--gutter) - 20px) * 0.228);
   line-height: 0.8;
   text-transform: uppercase;
   color: var(--blue);
