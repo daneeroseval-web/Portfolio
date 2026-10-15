@@ -12,6 +12,7 @@ html:has(.bc) { overflow-x: clip; }
   margin: 0; font-family: var(--display); font-weight: 800;
   font-size: clamp(76px, 21.4vw, 400px); line-height: 0.8; text-transform: uppercase;
   color: var(--blue); overflow: hidden; white-space: nowrap;
+  padding-top: 0.04em; margin-top: -0.04em; /* room for the cap tops */
 }
 .bc-title span { display: inline-block; transform: translateY(105%); transition: transform 1.2s var(--ease); }
 .is-loaded .bc-title span { transform: none; }
